@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
     <router-link to="/helloworld/hello1">hello1</router-link>
-    <router-link to="/helloworld/hello2">hello2</router-link>
+    <router-link :to="{name:'hello2',params:{user:'zzhello'}}">hello2</router-link>
+    <a href="javascript:void(0)" @click="hello3('someone')">hello3</a>
+    <router-link :to="{name:'hello4',params:{user:'hehe'}}">hello4</router-link>
     <h1>{{ msg }}</h1>
     <router-view></router-view>
   </div>
@@ -13,6 +15,17 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods:{
+    hello3(user){
+      // 注意：传参用#router，接收用$route
+      this.$router.push({
+        name:'hello3',
+        params:{
+          user:user
+        }
+      })
     }
   }
 }

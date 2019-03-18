@@ -1,6 +1,8 @@
 <template>
   <div>
       <h1>{{ msg }}</h1>
+      <br>
+      <div>说明：简单的路由跳转，用router-link的to属性</div>
   </div>
 </template>
 
