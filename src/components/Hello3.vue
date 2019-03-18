@@ -12,7 +12,7 @@ export default {
   name: 'Hello3',
   data () {
     return {
-      msg: 'the page for hello4',
+      msg: 'the page for hello3',
       user:this.$route.params.user
     }
   }
