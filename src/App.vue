@@ -4,7 +4,8 @@
     <router-link to="/">index</router-link> | 
     <router-link to="/helloworld">helloworld</router-link> | 
     <router-link to="/views">views</router-link> | 
-    <router-link to="/params/888/news title">params</router-link>
+    <router-link to="/params/888/news title">params</router-link> | 
+    <router-link to="/gohome">gohome</router-link>
     <hr>
     <router-view/>
     <router-view name="left" style="float:left;width:50%;background-color:#ccc;height:300px;"></router-view>
