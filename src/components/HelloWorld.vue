@@ -5,7 +5,22 @@
     <a href="javascript:void(0)" @click="hello3('someone')">hello3</a>
     <router-link :to="{name:'hello4',params:{user:'hehe'}}">hello4</router-link>
     <h1>{{ msg }}</h1>
-    <router-view></router-view>
+    <!-- css过渡类名： 组件过渡过程中，会有四个CSS类名进行切换，这四个类名与transition的name属性有关，比如name=”fade”,会有如下四个CSS类名：
+
+    fade-enter:进入过渡的开始状态，元素被插入时生效，只应用一帧后立刻删除。
+    fade-enter-active:进入过渡的结束状态，元素被插入时就生效，在过渡过程完成后移除。
+    fade-leave:离开过渡的开始状态，元素被删除时触发，只应用一帧后立刻删除。
+    fade-leave-active:离开过渡的结束状态，元素被删除时生效，离开过渡完成后被删除。 -->
+
+    <!-- 过渡模式mode：
+
+    in-out:新元素先进入过渡，完成之后当前元素过渡离开。
+    out-in:当前元素先进行过渡离开，离开完成后新元素过渡进入。 -->
+
+
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -33,18 +48,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+.fade-enter {
+  opacity:0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.fade-leave{
+  opacity:1;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.fade-enter-active{
+  transition:opacity .5s;
 }
-a {
-  color: #42b983;
+.fade-leave-active{
+  opacity:0;
+  transition:opacity .5s;
 }
 </style>
