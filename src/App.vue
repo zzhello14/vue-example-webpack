@@ -3,8 +3,11 @@
     <img src="./assets/logo.png" height="50px">
     <router-link to="/">index</router-link> | 
     <router-link to="/helloworld">helloworld</router-link>
+    <router-link to="/views">views</router-link>
     <hr>
     <router-view/>
+    <router-view name="left" style="float:left;width:50%;background-color:#ccc;height:300px;"></router-view>
+    <router-view name="right" style="float:right;width:50%;background-color:#c0c;height:300px;"></router-view>
   </div>
 </template>
 
