@@ -27,7 +27,8 @@ export default new Router({
         {path:'hello2',name:'hello2',component:Hello2},
         {path:'hello3',name:'hello3',component:Hello3},
         {path:'hello4/:user',name:'hello4',component:Hello4},
-      ]
+      ],
+      alias: '/gohello'
     },
     {
       path: '/views',
