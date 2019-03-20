@@ -7,6 +7,7 @@ import Hello2 from '@/components/Hello2'
 import Hello3 from '@/components/Hello3'
 import Hello4 from '@/components/Hello4'
 import Views from '@/components/Views'
+import Params from '@/components/Params'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
         left:Hello1,
         right:Hello2
       }
+    },
+    {
+      path: '/params/:newsId/:newsTitle',
+      name: 'params',
+      component: Params
     }
   ]
 })
