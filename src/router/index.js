@@ -8,10 +8,12 @@ import Hello3 from '@/components/Hello3'
 import Hello4 from '@/components/Hello4'
 import Views from '@/components/Views'
 import Params from '@/components/Params'
+import Error from '@/components/Error'
 
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',// 默认是hash
   routes: [
     {
       path: '/',
@@ -48,6 +50,10 @@ export default new Router({
       path: '/gohome',
       name: 'gohome',
       redirect: '/'
+    },
+    {
+      path:'*',
+      component:Error
     }
   ]
 })
