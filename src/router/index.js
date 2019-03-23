@@ -27,7 +27,7 @@ export default new Router({
       children:[
         {path:'hello1',name:'hello1',component:Hello1},//path不要在前面加/，加了表示是根目录
         {path:'hello2',name:'hello2',component:Hello2},
-        {path:'hello3',name:'hello3',component:Hello3},
+        {path:'hello3',name:'hello3',component: resolve => require(['@/components/Hello3'], resolve),},
         {path:'hello4/:user',name:'hello4',component:Hello4},
       ],
       alias: '/gohello'
