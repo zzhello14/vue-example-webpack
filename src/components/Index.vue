@@ -1,12 +1,15 @@
 <template>
   <div>
     <h1>Home Page</h1>
-    <p><button @click="pushbypath">to hello</button></p>
-    <p><button @click="pushbyname">to hook</button></p>
+    <div style="color:red">online: {{$store.state.online}}</div>
+    <p><button @click="pushbypath">to hello</button> <button @click="pushbyname">to hook</button></p>
+    <p><button @click="$store.commit('add')">online +</button> <button @click="$store.commit('reduce')">online -</button></p>
   </div>
 </template>
 
 <script>
+import store from '@/vuex/store'
+
 export default {
   name: 'Index',
   data () {
@@ -21,6 +24,7 @@ export default {
     pushbyname(){
       this.$router.push({name:'hook',params:{id:10086}});
     }
-  }
+  },
+  store
 }
 </script>

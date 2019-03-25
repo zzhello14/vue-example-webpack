@@ -5,6 +5,7 @@
     <a href="javascript:void(0)" @click="hello3('someone')">hello3</a>
     <router-link :to="{name:'hello4',params:{user:'hehe'}}">hello4</router-link>
     <h1>{{ msg }}</h1>
+    <div style="color:red">online: {{$store.state.online}}</div>
     <!-- css过渡类名： 组件过渡过程中，会有四个CSS类名进行切换，这四个类名与transition的name属性有关，比如name=”fade”,会有如下四个CSS类名：
 
     fade-enter:进入过渡的开始状态，元素被插入时生效，只应用一帧后立刻删除。
@@ -25,6 +26,8 @@
 </template>
 
 <script>
+import store from '@/vuex/store'
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -42,7 +45,8 @@ export default {
         }
       })
     }
-  }
+  },
+  store
 }
 </script>
 
