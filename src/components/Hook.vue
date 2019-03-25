@@ -19,9 +19,13 @@ export default {
       msg: 'Welcome to Vue example'
     }
   },
+  created(){
+    console.log(this.$route.params.id)
+  },
   beforeRouteEnter:(to,from,next)=>{
     console.log('====beforRouteEnter====');
     console.log(from);
+    console.log(this)
     next();
   },
   beforeRouteLeave:(to,from,next)=>{

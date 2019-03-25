@@ -7,7 +7,9 @@
     <router-link to="/params/888/news title">params</router-link> | 
     <router-link to="/gohome">gohome</router-link> | 
     <router-link to="/gohello">gohello</router-link> | 
-    <router-link to="/hook">hook</router-link>
+    <router-link to="/hook">hook</router-link> | 
+    <button @click="go">go</button> | 
+    <button @click="back">back</button>
     <hr>
     <router-view/>
     <router-view name="left" style="float:left;width:50%;background-color:#ccc;height:300px;"></router-view>
@@ -17,7 +19,15 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods:{
+    go(){
+      this.$router.go(1);
+    },
+    back(){
+      this.$router.go(-1);
+    }
+  }
 }
 </script>
 
