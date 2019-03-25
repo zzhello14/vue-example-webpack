@@ -6,7 +6,8 @@
     <router-link to="/views">views</router-link> | 
     <router-link to="/params/888/news title">params</router-link> | 
     <router-link to="/gohome">gohome</router-link> | 
-    <router-link to="/gohello">gohello</router-link>
+    <router-link to="/gohello">gohello</router-link> | 
+    <router-link to="/hook">hook</router-link>
     <hr>
     <router-view/>
     <router-view name="left" style="float:left;width:50%;background-color:#ccc;height:300px;"></router-view>

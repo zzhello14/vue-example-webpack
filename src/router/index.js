@@ -9,6 +9,7 @@ import Hello4 from '@/components/Hello4'
 import Views from '@/components/Views'
 import Params from '@/components/Params'
 import Error from '@/components/Error'
+import Hook from '@/components/Hook'
 
 Vue.use(Router)
 
@@ -50,6 +51,15 @@ export default new Router({
       path: '/gohome',
       name: 'gohome',
       redirect: '/'
+    },
+    {
+      path: '/hook',
+      name: 'hook',
+      component: Hook,
+      beforeEnter:(to,from,next)=>{
+        console.log(next);
+        next();
+      }
     },
     {
       path:'*',
