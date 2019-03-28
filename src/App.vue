@@ -9,7 +9,8 @@
     <router-link to="/gohello">gohello</router-link> | 
     <router-link to="/hook">hook</router-link> | 
     <button @click="go">go</button> | 
-    <button @click="back">back</button>
+    <button @click="back">back</button> | 
+    <router-link to="/online">online</router-link>
     <hr>
     <router-view/>
     <router-view name="left" style="float:left;width:50%;background-color:#ccc;height:300px;"></router-view>

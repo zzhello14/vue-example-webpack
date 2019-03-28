@@ -28,7 +28,7 @@ export default new Router({
       children:[
         {path:'hello1',name:'hello1',component:Hello1},//path不要在前面加/，加了表示是根目录
         {path:'hello2',name:'hello2',component:Hello2},
-        {path:'hello3',name:'hello3',component: resolve => require(['@/components/Hello3'], resolve),},
+        {path:'hello3',name:'hello3',component: resolve => require(['@/components/Hello3'], resolve)},
         {path:'hello4/:user',name:'hello4',component:Hello4},
       ],
       alias: '/gohello'
@@ -60,6 +60,16 @@ export default new Router({
         console.log(next);
         next();
       }
+    },
+    {
+      path: '/online',
+      name: 'online',
+      component: resolve => require(['@/components/Online'], resolve),
+      children:[
+        {path:'online1',name:'online1',component: resolve => require(['@/components/Online1'], resolve)},
+        {path:'online2',name:'online2',component: resolve => require(['@/components/Online2'], resolve)},
+        {path:'online3',name:'online3',component: resolve => require(['@/components/Online3'], resolve)},
+      ]
     },
     {
       path:'*',
