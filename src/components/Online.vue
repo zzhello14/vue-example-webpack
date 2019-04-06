@@ -5,6 +5,7 @@
       <router-link to="/online/online3">online3</router-link>
       <router-link to="/online/online4">online4</router-link>
       <router-link to="/online/online5">online5</router-link>
+      <router-link to="/online/online6">online6</router-link>
       <router-view></router-view>
   </div>
 </template>

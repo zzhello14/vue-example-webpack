@@ -14,7 +14,7 @@ import store from '@/vuex/store'
 import { mapState,mapMutations } from 'vuex';
 
 export default {
-  name: 'online3',
+  name: 'online4',
   data () {
     return {
       msg: 'the page for online4'
