@@ -3,7 +3,7 @@
     <h1>Home Page</h1>
     <div style="color:red">online: {{$store.state.online}}</div>
     <p><button @click="pushbypath">to hello</button> <button @click="pushbyname">to hook</button></p>
-    <p><button @click="$store.commit('add')">online +</button> <button @click="$store.commit('reduce')">online -</button></p>
+    <p><button @click="$store.commit('add',2)">online +</button> <button @click="$store.commit('reduce')">online -</button></p>
   </div>
 </template>
 

@@ -8,8 +8,8 @@ const state = {
 }
 
 const mutations = {
-    add(state){
-        state.online++;
+    add(state,n){
+        state.online += n;
     },
     reduce(state){
         if(state.online > 0){

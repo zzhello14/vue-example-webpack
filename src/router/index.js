@@ -69,6 +69,7 @@ export default new Router({
         {path:'online1',name:'online1',component: resolve => require(['@/components/Online1'], resolve)},
         {path:'online2',name:'online2',component: resolve => require(['@/components/Online2'], resolve)},
         {path:'online3',name:'online3',component: resolve => require(['@/components/Online3'], resolve)},
+        {path:'online4',name:'online4',component: resolve => require(['@/components/Online4'], resolve)},
       ]
     },
     {
