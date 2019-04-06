@@ -18,6 +18,12 @@ const mutations = {
     }
 }
 
+const getters = {
+    online:function(state){
+        return state.online += 100;
+    }
+}
+
 export default new Vuex.Store({
-    state,mutations
+    state,mutations,getters
 })
